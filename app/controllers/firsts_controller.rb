@@ -1,5 +1,6 @@
-class FirstsController < ApplicationController
+# frozen_string_literal: true
 
+class FirstsController < ApplicationController
   def new
     @first = First.new
   end
@@ -12,7 +13,7 @@ class FirstsController < ApplicationController
     @first = First.new(first_params)
 
     if @first.save
-      ActionCable.server.broadcast('first_channel',  { count: First.count })
+      ActionCable.server.broadcast('first_channel', { count: First.count })
       render json: @first, status: :created
     else
       render json: @first.errors, status: :unprocessable_entity
