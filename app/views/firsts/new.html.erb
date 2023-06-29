@@ -1,0 +1,9 @@
+<%= form_with(model: @first, url: firsts_path, id: "new-first-form") do |form| %>
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <%= form.submit "Create First" %>
+<% end %>
+<p>Number of First records: <span id="first-count"><%= First.count %></span> <i class="fa-solid fa-bell"></i></p>

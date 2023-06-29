@@ -3,6 +3,14 @@
   "version": "1.0.0",
   "dependencies": {
     "@rails/actioncable": "^7.0.5-1",
-    "channels": "^0.0.4"
+    "channels": "^0.0.4",
+    "fontawesome": "^5.6.3"
+  },
+  "devDependencies": {
+    "prettier": "^2.8.8"
+  },
+  "scripts": {
+    "format:check": "prettier --check 'app/**/*.{js,jsx,ts,tsx,css,scss,html,json}'",
+    "format:write": "prettier --write 'app/**/*.{js,jsx,ts,tsx,css,scss,html,json}'"
   }
 }

@@ -1,15 +1,18 @@
-import consumer from "channels/consumer"
+import consumer from 'channels/consumer';
 
-consumer.subscriptions.create("FirstChannel", {
+consumer.subscriptions.create('FirstChannel', {
   connected() {
-    console.log("Connected to FirstChannel");
-    },
+    console.log('Connected to FirstChannel');
+  },
 
   disconnected() {
-    console.log("Disconnected from FirstChannel");
-    },
+    console.log('Disconnected from FirstChannel');
+  },
 
   received(data) {
-    console.log("Received data:", data);
-  }
+    const countElement = document.getElementById('first-count');
+    if (countElement) {
+      countElement.innerHTML = data.count;
+    }
+  },
 });
