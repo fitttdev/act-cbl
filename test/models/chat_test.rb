@@ -2,7 +2,7 @@
 
 require 'test_helper'
 
-class FirstTest < ActiveSupport::TestCase
+class ChatTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end
